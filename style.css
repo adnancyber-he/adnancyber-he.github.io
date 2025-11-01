@@ -1,0 +1,59 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+#site-loader {
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#site-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll Animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Accounts for fixed header */
+}
+
+/* Space Adjustments */
+section {
+  padding: 4rem 0;
+  margin: 2rem 0;
+}
+
+.section-content {
+  margin: 2rem 0;
+}
+
+/* Preserve Existing Styles */
+body {
+  font-family: 'Roboto Mono', monospace;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muhammad Adnan T - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link rel="stylesheet" href="style.css">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="script.js" defer></script>
+<style>
+      body {
+        font-family: "Roboto Mono", monospace;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Roboto Mono", "monospace"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#f5f5f5]">
+
+  <!-- Loading overlay (will be hidden via JS after page load) -->
+  <div id="site-loader" class="fixed inset-0 z-[2000] flex items-center justify-center bg-background-dark/90">
+    <div class="flex items-center flex-col gap-3">
+      <div class="loader-spinner rounded-full border-4 border-t-transparent border-white w-12 h-12"></div>
+      <p class="text-sm text-[#b3b3b3]">Loading…</p>
+    </div>
+  </div>
+
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <main class="flex-1">
+                <div class="flex flex-1 justify-center py-5 lg:px-10 xl:px-40">
+                    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                        <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#232f48] bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-10">
+                            <div class="flex items-center gap-4 text-white">
+                                <div class="size-5 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Muhammad Adnan T</h2>
+                            </div>
+                            <nav class="hidden items-center gap-9 md:flex">
+                                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#home">Home</a>
+                                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#about">About</a>
+                                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#skills">Skills</a>
+                                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#projects">Projects</a>
+                                <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#contact">Contact</a>
+                            </nav>
+                        </header>
+                        <section class="py-10 @container" id="home" data-animate="fade-up">
+                                <div class="flex flex-col-reverse gap-8 px-4 py-10 @[864px]:flex-row @[864px]:items-center">
+                                    <div class="flex flex-col gap-6 @[864px]:justify-center">
+                                        <div class="flex flex-col gap-2 text-left">
+                                            <h1 class="text-white text-4xl font-bold leading-tight tracking-[-0.033em] @[480px]:text-5xl">Certified Penetration Tester &amp; Ethical Hacker</h1>
+                                            <h2 class="text-[#b3b3b3] text-base font-normal leading-normal @[480px]:text-lg">Breaking Barriers, Securing Systems.</h2>
+                                        </div>
+                                        <div class="flex flex-wrap gap-3">
+                                            <button class="relative flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-[0_0_15px_5px_rgba(19,91,236,0.5)] hover:shadow-[0_0_25px_8px_rgba(19,91,236,0.7)]">
+                                                <span class="truncate">Download CV</span>
+                                            </button>
+                                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#232f48] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#324467] transition-colors">
+                                            <span class="truncate">Hire Me</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full @[864px]:w-2/5 @[864px]:flex-shrink-0" data-alt="A professional headshot or abstract hacker silhouette" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzrQzqpA4WzOWaTChlgCjdgFXFrSvmtKrhxh4jy_hJNCsQrjjD1GE47E8kTU5-y9xdKAFBFJNeXVEl4SYm8WHehWHe-NjgrSSrGrnFxCtHMBikBFrARXk7U6Bopq0z3GgVIFItAchNkPFAlo0zM8qBVvJicZs7zPFKpFpk44kq98lQXx2I4ltn1yiNqxH-ZcDwanOA3mjJFRD9zLrSr_AClDGREkuI93mh9Z7_TVn-sxnIvHL0XjqYPGDFB11cCP7EY1zMCO3_2Js');"></div>
+                            </div>
+                        </section>
+                        <section class="py-10" id="about" data-animate="fade-up">
+                            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Me</h2>
+                            <p class="text-[#b3b3b3] text-base font-normal leading-normal pb-3 pt-1 px-4">Passionate about identifying vulnerabilities and strengthening digital defenses to create a safer online world. With a deep-seated curiosity for cybersecurity, I thrive on the challenges of ethical hacking and security research, constantly pushing the boundaries of my knowledge to stay ahead of emerging threats.</p>
+                            <div class="flex flex-wrap gap-4 p-4">
+                                <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6">
+                                    <p class="text-white text-base font-medium leading-normal">Certifications</p>
+                                    <p class="text-white tracking-light text-2xl font-bold leading-tight">5+</p>
+                                </div>
+                                <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6">
+                                    <p class="text-white text-base font-medium leading-normal">Years of Experience</p>
+                                    <p class="text-white tracking-light text-2xl font-bold leading-tight">1</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="py-10" id="skills" data-animate="fade-up">
+                            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-5 pt-5">Technical Skills</h2>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4">
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">N</div>
+                                    <p class="text-sm font-medium text-white">Nmap</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">M</div>
+                                    <p class="text-sm font-medium text-white">Metasploit</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">B</div>
+                                    <p class="text-sm font-medium text-white">Burp Suite</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">W</div>
+                                    <p class="text-sm font-medium text-white">Wireshark</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">K</div>
+                                    <p class="text-sm font-medium text-white">Kali Linux</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">P</div>
+                                    <p class="text-sm font-medium text-white">Python</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">O</div>
+                                    <p class="text-sm font-medium text-white">OWASP ZAP</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 rounded-lg border border-[#324467] bg-[#1a1a1a] p-6 text-center transition-transform hover:-translate-y-1">
+                                    <div class="text-3xl text-primary">S</div>
+                                    <p class="text-sm font-medium text-white">SQLMap</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="py-10" id="projects" data-animate="fade-up">
+                            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-5 pt-5">Projects &amp; Case Studies</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+                                <div class="flex flex-col overflow-hidden rounded-lg border border-[#324467] bg-[#1a1a1a]">
+                                    <img class="h-48 w-full object-cover" data-alt="Abstract image of network connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUzq6FT6djrY7Ixbk66b9RGhAd1QV7rLJ_iLc4ivJ9Qdr04NwiB1tUqcpKAQTeqHMwysHv0M2X_u0zcmAB74Y9TETqfAwnfZJQKNHQfjC3Oy3PMtoUMWejP8fomsYNPFh1rtCY2SX1vZW9TUQ0ZZsqj3e5uGWIJUhQH2PgzJuRqsazUIvm2K2QUvoq5vDbi0IbLrchB1G3P4aLQkSkv9poKAKL3IIL8UjyM0PoV4_0V56gx8Y8Rcd62T_Q0TeOzOmwq6w9v516P9g"/>
+                                    <div class="flex flex-col gap-3 p-6">
+                                        <h3 class="text-lg font-bold text-white">Web Application Security Audit</h3>
+                                        <p class="text-sm text-[#b3b3b3]">Conducted a comprehensive security audit for a fintech startup, identifying and mitigating 15+ critical vulnerabilities.</p>
+                                        <button class="mt-2 w-full max-w-[150px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#232f48] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#324467] transition-colors">View Details</button>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col overflow-hidden rounded-lg border border-[#324467] bg-[#1a1a1a]">
+                                    <img class="h-48 w-full object-cover" data-alt="Code on a dark computer screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7cS6Pb181RVQ4exeS4_4T157rmmgneBqdSRGlXIyDUi0DRBp-oh3kYSf38VpnZMmHvpVpH6j7XUviODE0OV7CFFbJCjgqOr6Fuh01QVwhoCYTTrROyzuZO3eMcxUI6fCi6jEPgd0WxsawEXUPO0CxmAaORNOANLkNP6hKFfEM5nWw96kpCYVGyfZe7QWnwTG-7UaKWnuiq0T8vLtvQPblrJ-PJ01P18YkMAhy7d_inKD4tkrn3Mb7nBD3DeXjCmwQ7iN0W193Jc"/>
+                                    <div class="flex flex-col gap-3 p-6">
+                                        <h3 class="text-lg font-bold text-white">Network Penetration Test</h3>
+                                        <p class="text-sm text-[#b3b3b3]">Simulated a real-world cyber attack on a corporate network to expose weaknesses in firewall configurations and internal systems.</p>
+                                        <button class="mt-2 w-full max-w-[150px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#232f48] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#324467] transition-colors">View Details</button>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col overflow-hidden rounded-lg border border-[#324467] bg-[#1a1a1a]">
+                                    <img class="h-48 w-full object-cover" data-alt="Smartphone displaying security-related icons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSUd651uPM-gjh1GITOaNQhor_Rovl9iIvy7GOUfOJcffeGsWCKoOvsup0HPPZ7vCNzvfB-GBwmPFNIj0HouA1euspaUlvt2bbBJH9xTtfZ9x97uguqbTUs8UtoQeOzyv6Yu1G1DGvaspCD2vtSJefGz2zGmW-32GdI-V-mvVa_CwLAm-Jav2PZjXBQoJJm2tgVIxHq8_4wtPXDcLsqMPLGjTZNL-wE_a3jlWusG6f-rvBTMcYHcfNsBClBfiLXrA2Fo0fjVMuEf4"/>
+                                    <div class="flex flex-col gap-3 p-6">
+                                        <h3 class="text-lg font-bold text-white">Mobile App Security Analysis</h3>
+                                        <p class="text-sm text-[#b3b3b3]">Performed static and dynamic analysis on an e-commerce mobile app, uncovering insecure data storage and API vulnerabilities.</p>
+                                        <button class="mt-2 w-full max-w-[150px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#232f48] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#324467] transition-colors">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="py-10" id="contact" data-animate="fade-up">
+                            <div class="flex justify-center gap-6 px-4">
+                                <a aria-label="GitHub" class="text-[#b3b3b3] hover:text-white transition-colors" href="https://github.com/adnancyber-he/">
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.11.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
+                                    </svg>
+                                </a>  
+                                <a aria-label="LinkedIn" class="text-[#b3b3b3] hover:text-white transition-colors" href="#">
+                                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.128 0c0 1.14-.925 2.065-2.065 2.065zM7.142 20.452H3.59V9h3.552v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path>
+                                    </svg>
+                                </a>
+                                <a aria-label="Instagram" class="text-[#b3b3b3] hover:text-white transition-colors" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
+                                </a>
+                                <a aria-label="HackTheBox" class="text-[#b3b3b3] hover:text-white transition-colors" href="#">
+                                    <span class="font-bold text-xl">H</span>
+                                </a>
+                            </div>
+                        </section>
+                        <section class="py-10">
+                            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-5 pt-5">Get in Touch</h2>
+                            <div class="px-4">
+                                <form class="flex flex-col gap-4">
+                                    <input class="rounded-lg border border-[#324467] bg-[#1a1a1a] p-3 text-white placeholder:text-[#b3b3b3] focus:border-primary focus:ring-primary" placeholder="Name" type="text"/>
+                                    <input class="rounded-lg border border-[#324467] bg-[#1a1a1a] p-3 text-white placeholder:text-[#b3b3b3] focus:border-primary focus:ring-primary" placeholder="Email" type="email"/>
+                                    <textarea class="rounded-lg border border-[#324467] bg-[#1a1a1a] p-3 text-white placeholder:text-[#b3b3b3] focus:border-primary focus:ring-primary" placeholder="Message" rows="5"></textarea>
+                                    <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors" type="submit">Send Message</button>
+                                </form>
+                                <p class="mt-4 text-center text-sm text-[#b3b3b3]">or email me at <a class="text-primary hover:underline" href="mailto:muhammadadnanthayyil@gmail.com">muhammadadnanthayyil@gmail.com</a></p>
+                            </div>
+                        </section>
+                        <footer class="mt-10 border-t border-solid border-t-[#232f48] px-4 py-6 text-center">
+                            <p class="text-sm text-[#b3b3b3]">© 2025 Muhammad Adnan T — All Rights Reserved.</p>
+                        </footer>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
