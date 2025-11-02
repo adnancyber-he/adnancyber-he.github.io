@@ -47,5 +47,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function viewDetails(id) {
-  window.location.href = `details.html?id=${id}`;
+  window.location.href = `/details.html?id=${id}`;
 }
+
