@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <style>
+    body { background: #0b1221; color: #fff; font-family: "Inter", sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    .project-details { background: #141b2d; border-radius: 16px; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.4); }
+    h1 { font-size: 2rem; margin-bottom: 10px; font-weight: 700; }
+    .subtitle { color: #9ca3af; margin-bottom: 20px; }
+    img { width: 100%; border-radius: 12px; margin-top: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.6); }
+    .back-btn { display: inline-block; margin-top: 30px; background: #1f3fff; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .back-btn:hover { background: #324dff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="project-details" id="project-container">
+      <!-- Dynamic project content will load here -->
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const projects = {
+      webapp: {
+        title: "Web Application Security Audit",
+        subtitle: "Comprehensive security assessment for a fintech startup",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCUzq6FT6djrY7Ixbk66b9RGhAd1QV7rLJ_iLc4ivJ9Qdr04NwiB1tUqcpKAQTeqHMwysHv0M2X_u0zcmAB74Y9TETqfAwnfZJQKNHQfjC3Oy3PMtoUMWejP8fomsYNPFh1rtCY2SX1vZW9TUQ0ZZsqj3e5uGWIJUhQH2PgzJuRqsazUIvm2K2QUvoq5vDbi0IbLrchB1G3P4aLQkSkv9poKAKL3IIL8UjyM0PoV4_0V56gx8Y8Rcd62T_Q0TeOzOmwq6w9v516P9g",
+        html: `
+          <p><strong>Client:</strong> Confidential Fintech Startup</p>
+          <p><strong>Duration:</strong> 2 Weeks</p>
+          <p><strong>Role:</strong> Penetration Tester / Security Consultant</p>
+          <h2>Overview</h2>
+          <p>Conducted an in-depth <strong>Web Application Security Audit</strong>...</p>
+          <h2>Tools & Technologies</h2>
+          <p><strong>Burp Suite</strong>, <strong>Nmap</strong>, <strong>ZAP</strong>, etc.</p>
+        `
+      },
+      mobile: {
+        title: "Mobile App Security Analysis",
+        subtitle: "Comprehensive static and dynamic testing of an e-commerce mobile application",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDSUd651uPM-gjh1GITOaNQhor_Rovl9iIvy7GOUfOJcffeGsWCKoOvsup0HPPZ7vCNzvfB-GBwmPFNIj0HouA1euspaUlvt2bbBJH9xTtfZ9x97uguqbTUs8UtoQeOzyv6Yu1G1DGvaspCD2vtSJefGz2zGmW-32GdI-V-mvVa_CwLAm-Jav2PZjXBQoJJm2tgVIxHq8_4wtPXDcLsqMPLGjTZNL-wE_a3jlWusG6f-rvBTMcYHcfNsBClBfiLXrA2Fo0fjVMuEf4",
+        html: `
+          <p><strong>Client:</strong> E-commerce Startup</p>
+          <p><strong>Duration:</strong> 2 Weeks</p>
+          <p><strong>Role:</strong>  Mobile Security Analyst / Penetration Tester</p>
+          <h2>Overview</h2>
+          <p>Conducted an in-depth <strong>Mobile Application Security Analysis</strong> to evaluate an Android-based
+        e-commerce app’s resilience against real-world attacks. The objective was to identify weaknesses in data
+        storage, communication, and backend API integrations while ensuring compliance with <strong>OWASP MASVS</strong> and
+        <strong>OWASP Mobile Top 10</strong> standards.</p>
+        `
+      },
+      network: {
+        title: "Network Penetration Testing",
+        subtitle: "Simulated real-world cyber attack against a corporate network",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDz7cS6Pb181RVQ4exeS4_4T157rmmgneBqdSRGlXIyDUi0DRBp-oh3kYSf38VpnZMmHvpVpH6j7XUviODE0OV7CFFbJCjgqOr6Fuh01QVwhoCYTTrROyzuZO3eMcxUI6fCi6jEPgd0WxsawEXUPO0CxmAaORNOANLkNP6hKFfEM5nWw96kpCYVGyfZe7QWnwTG-7UaKWnuiq0T8vLtvQPblrJ-PJ01P18YkMAhy7d_inKD4tkrn3Mb7nBD3DeXjCmwQ7iN0W193Jc",
+        html: `
+          <p><strong>Client:</strong> Confidential Corporate Client</p>
+          <p><strong>Duration:</strong> 3 Weeks</p>
+          <p><strong>Role:</strong> Network Pen Tester / Security Consultant</p>
+          <h2>Overview</h2>
+          <p>Executed a comprehensive <strong>Network Penetration Test</strong> that simulated realistic attacker techniques
+        to identify weaknesses in firewall configurations, network segmentation, and internal systems. The engagement
+        aimed to validate the client's detection and response capabilities while uncovering actionable risks that could
+        lead to data exfiltration or lateral movement.</p>
+        `
+      }
+    };
+
+    const container = document.getElementById("project-container");
+
+    if (id && projects[id]) {
+      const project = projects[id];
+      container.innerHTML = `
+        <h1>${project.title}</h1>
+        <p class="subtitle">${project.subtitle}</p>
+        <img src="${project.image}" alt="${project.title}">
+        ${project.html}
+        <a href="index.html" class="back-btn">← Back to Projects</a>
+      `;
+    } else {
+      container.innerHTML = `
+        <h1>Project Not Found</h1>
+        <p>Sorry, this project doesn’t exist or has been removed.</p>
+        <a href="index.html" class="back-btn">← Back</a>
+      `;
+    }
+  </script>
+</body>
+</html>
